@@ -9,13 +9,44 @@
 
 body {
   height: 100vh; 
-  background: #141E30;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: grid;
+  place-items: center;
+  background: #22092C;
 
  }
 
  .card__title {
   font-family: 'Sansita Swashed';
-  color: orangered;
+  font-weight: 800;
+  color: #023020;
+ }
+
+ .card {
+  width: 400px;
+ }
+
+  .card__content {
+   text-align: center;
+   position: relative;
+   padding: 10em;
+   transition: transform 3s;
+   background: #BE3144;
+   transform-style: preserve-3d;
+ }
+
+ .card:hover .card__content {
+  transform: rotateY(.5turn);
+ }
+
+ .card__front, .card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ }
+
+ .card__front {
+  background: #F05941;
+  transform: rotateY(.25turn);
  }
