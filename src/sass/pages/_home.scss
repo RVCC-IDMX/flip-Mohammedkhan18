@@ -23,16 +23,19 @@ body {
 
  .card {
   width: 400px;
+  perspective: 1000px;
  }
 
  .card__content {
   text-align: center;
   position: relative;
-  padding: 10em;
+  padding: 15em 5em;
   transition: transform 3s;
   background: #F0A500;
   transform-style: preserve-3d;
  }
+
+
 
  .card:hover .card__content {
   transform: rotateY(.5turn);
@@ -45,7 +48,7 @@ body {
   bottom: 0;
   left: 0;
   right:0;
-  padding: 1em;
+  padding: 5em 3em;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   display: grid;
@@ -55,7 +58,8 @@ body {
 
 .card__front {
   background-color: #E6D5B8;
-  background-image: url("https://res.cloudinary.com/mohammed-khan/image/upload/v1699753815/pumpkin_pie.png");
+  opacity: 1;
+  background-image: url("/images/pumpkin_pie.png");
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -90,15 +94,41 @@ body {
 }
 
 .card__ingredients {
-  transform: translateZ(3rem);
+  transform: var(--level-two);
+  line-height: 1.6;
   font-family: 'Roboto Slab';
   font-size: 1em;
   letter-spacing: 1px;
   margin-left: 25px;
   margin-right: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card__back::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px dashed #1B1A17 ;
+  transform: var(--level-one);
 }
 
 .card__back {
   transform: rotateY(.5turn);
   background: #F0A500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+
+  }
 }
