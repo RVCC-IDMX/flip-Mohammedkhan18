@@ -2,7 +2,11 @@
 @use "../abstracts/variables" as var;
 @use "../base/typography" as type;
 
-
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -44,11 +48,29 @@ body {
   padding: 1em;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
 
 }
 
 .card__front {
-  background: #F0A500;
+  background-color: #E6D5B8;
+  opacity: 1;
+  background-image: url("https://Users/macbook/Desktop/Web%20Dev%20II/flip-Mohammedkhan18/src/images/pumpkin_pie.png");
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.card__front::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px dashed #1B1A17 ;
+  transform: var(--level-one);
 }
 
 .card__title {
@@ -62,9 +84,11 @@ body {
 
 .card__ingredients {
   transform: translateZ(3rem);
+  font-family: 'Roboto Slab';
+  margin-left: 25px;
 }
 
 .card__back {
   transform: rotateY(.5turn);
-  background: #E45826;
+  background: #F0A500;
 }
