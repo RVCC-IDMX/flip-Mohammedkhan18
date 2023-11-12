@@ -21,6 +21,17 @@ body {
 
  }
 
+ .logo {
+  color: #F0A500;
+  margin-right: 80%;
+  font-family: 'Sansita Swashed';
+  border: 2px solid #E6D5B8;
+  font-size: 1.2em;
+  padding: 20px;
+  padding-right: 40.2px;
+  width: 50px;
+ }
+
  .card {
   width: 400px;
   perspective: 1000px;
@@ -79,7 +90,8 @@ body {
 .card__title {
   font-size: 2rem;
   transform: var(--level-three);
-  text-transform: uppercase;
+  text-transform: b;
+  font-family: 'Sansita Swashed';
 }
 
 .card__description {
@@ -117,9 +129,39 @@ body {
   transform: var(--level-one);
 }
 
+.card__front:after {
+  content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      border: 15px solid #cecece;
+      border-bottom-color: white;
+      border-right-color: white;
+}
+
 .card__back {
   transform: rotateY(.5turn);
   background: #F0A500;
+}
+
+.card__back:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 15px solid transparent;
+      border-bottom-color: white;
+      border-left-color: white;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid black;
+  transform: var(level-two);
 }
 
 @media (prefers-reduced-motion: reduce) {
