@@ -28,4 +28,5 @@ Use this as the "Publish command" if needed by hosting services such as Netlify.
 
 ## Resources
 
-<small>The starter was inspired by [11ty Sass Skeleton](https://github.com/5t3ph/11ty-sass-skeleton) by [@5t3ph](https://twitter.com/5t3ph)</small>
+<small>Pumpkin Pie image by: Diliara Garifullina on https://unsplash.com/photos/baked-pie-44gnJa7BHk0</small>
+<small>Pumpkin Pie favicon by: Ekaterina Krupina on https://www.vecteezy.com/vector-art/3322219-pumpkin-pie-piece-illustration</small>
