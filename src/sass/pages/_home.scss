@@ -55,8 +55,7 @@ body {
 
 .card__front {
   background-color: #E6D5B8;
-  opacity: 1;
-  background-image: url("https://Users/macbook/Desktop/Web%20Dev%20II/flip-Mohammedkhan18/src/images/pumpkin_pie.png");
+  background-image: url("https://res.cloudinary.com/mohammed-khan/image/upload/v1699753815/pumpkin_pie.png");
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -75,17 +74,28 @@ body {
 
 .card__title {
   font-size: 2rem;
-  transform: translateZ(6rem);
+  transform: var(--level-three);
+  text-transform: uppercase;
 }
 
 .card__description {
-  transform: translateZ(4rem);
+  transform: var(--level-two);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  opacity: .7;
+  font-family: 'Roboto Slab';
+  margin-top: 15px;
+  max-width: 100%;
 }
 
 .card__ingredients {
   transform: translateZ(3rem);
   font-family: 'Roboto Slab';
+  font-size: 1em;
+  letter-spacing: 1px;
   margin-left: 25px;
+  margin-right: 25px;
 }
 
 .card__back {
