@@ -42,10 +42,29 @@ body {
   left: 0;
   right:0;
   padding: 1em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+}
+
+.card__front {
+  background: #F0A500;
 }
 
 .card__title {
   font-size: 2rem;
-  transform: translateZ(200px);
+  transform: translateZ(6rem);
 }
 
+.card__body {
+  transform: translateZ(3rem);
+}
+
+.card__description {
+  transform: translateZ(4rem);
+}
+
+.card__back {
+  transform: rotateY(.5turn);
+  background: #E45826;
+}
